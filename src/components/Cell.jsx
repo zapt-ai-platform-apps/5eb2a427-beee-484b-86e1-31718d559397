@@ -12,11 +12,19 @@ const Cell = ({ cell, onClick, onRightClick }) => {
         content = "🚩";
     }
 
+    const getCellStyle = () => {
+        if (cell.revealed) {
+            return 'bg-gray-300 border-gray-600 text-black';
+        } else {
+            return 'bg-gray-200 border-gray-600';
+        }
+    };
+
     return (
         <div 
-            className={`w-8 h-8 border border-gray-500 flex items-center justify-center text-sm
-                ${cell.revealed ? 'bg-gray-300' : 'bg-gray-200'}
-                cursor-pointer
+            className={`w-8 h-8 border border-gray-600 flex items-center justify-center text-sm box-border cursor-pointer 
+                ${getCellStyle()}
+                hover:bg-gray-400
             `}
             onClick={() => onClick(cell.x, cell.y)}
             onContextMenu={(e) => onRightClick(e, cell.x, cell.y)}

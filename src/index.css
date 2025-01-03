@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Windows 98 Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #c0c0c0;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
